@@ -30,7 +30,10 @@ private static double price[];
         }
 
         double total = calculateTotal(ціни);
+        double midNum = total / ціни.length;
         System.out.println("Загальна сумма: " + total);
+        System.out.println("Середнє значення "+ midNum);
+
 
         for (int i = 0; i < ціни.length; i++) {
             for (int j = 1; j < (ціни.length - i); j++) {
@@ -46,6 +49,7 @@ private static double price[];
         System.out.println("Сортирування:");
         for (double number : ціни)
             System.out.print(number + " ");
+
     }
 
     public static double calculateTotal(double[] ціни) {
@@ -54,8 +58,6 @@ private static double price[];
             total += ціна;
         }
         return total;
-
-
 
     }
 
